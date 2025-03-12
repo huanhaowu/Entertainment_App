@@ -34,15 +34,22 @@
 // }
 
 import Navbar from "./components/navigation/Navbar";
-// import "@/app/styles/global.css";
+import "@/app/styles/globals.css"
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
-        <body>
-        <Navbar/>
-        <main className="container mx-auto px-4">{children}</main>
-        </body>
+            <body>
+            <div className="flex h-screen">
+                <div className="w-fit bg-gray-800 text-white fixed h-full">
+                    <Navbar/>
+                </div>
+
+                <main className="flex-1 ml-64 p-4">
+                    {children}
+                </main>
+            </div>
+            </body>
         </html>
     );
 }
