@@ -1,7 +1,12 @@
 export default function Movies() {
     return (
-        <div className="text-center py-10">
+        <>
             <h1 className="text-4xl font-bold mb-4">MOVIES PAGE</h1>
-        </div>
+            {/*<ul>*/}
+            {/*    {movies.map((movie: any) => (*/}
+            {/*        <li key={movie.id}>{movie.title}</li>*/}
+            {/*    ))}*/}
+            {/*</ul>*/}
+        </>
     );
 }
