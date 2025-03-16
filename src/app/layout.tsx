@@ -40,15 +40,17 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
             <body>
-            <div className="flex h-screen">
-                <div className="w-fit bg-gray-800 text-white fixed h-full">
-                    <Navbar/>
-                </div>
+                <div className="grid grid-cols-[auto_1fr] grid-rows-5 gap-4 h-full">
+                    <div className="row-span-5">
+                        <Navbar/>
+                    </div>
 
-                <main className="flex-1 ml-64 p-4">
-                    {children}
-                </main>
-            </div>
+                    <main className="row-span-5 flex py-4">
+                        <div className="w-full">
+                            {children}
+                        </div>
+                    </main>
+                </div>
             </body>
         </html>
     );
